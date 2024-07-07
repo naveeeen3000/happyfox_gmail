@@ -1,0 +1,149 @@
+{
+    "rules": [
+        {
+            "name": "Rule 1",
+            "predicate": "All",
+            "conditions": [
+                {
+                    "field": "From",
+                    "operator": "contains",
+                    "value": "tenmiles.com"
+                },
+                {
+                    "field": "Subject",
+                    "operator": "equals",
+                    "value": "Interview"
+                },
+                {
+                    "field": "dateTime",
+                    "operator": "less",
+                    "value": "2 days"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "move",
+                    "destination": "INBOX"
+                },
+                {
+                    "type": "mark_as_read"
+                }
+            ]
+        },
+        {
+            "name": "Rule 2",
+            "predicate": "Any",
+            "conditions": [
+                {
+                    "field": "From",
+                    "operator": "contains",
+                    "value": "mailers@marketing.goindigo.in"
+                },
+                {
+                    "field": "Subject",
+                    "operator": "contains",
+                    "value": "VIT"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "move",
+                    "destination": "SPAM"
+                }
+            ]
+        },
+        {
+            "name": "Rule 3",
+            "predicate": "All",
+            "conditions": [
+                {
+                    "field": "From",
+                    "operator": "equals",
+                    "value": "noreply@redditmail.com"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "move",
+                    "destination": "CATEGORY_SOCIAL"
+                }
+            ]
+        },
+        {
+            "name": "Rule 4",
+            "predicate": "Any",
+            "conditions": [
+                {
+                    "field": "Subject",
+                    "operator": "contains",
+                    "value": "Urgent"
+                },
+                {
+                    "field": "From",
+                    "operator": "equals",
+                    "value": "boss@example.com"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "move",
+                    "destination": "IMPORTANT"
+                }
+            ]
+        },
+        {
+            "name": "Rule 5",
+            "predicate": "All",
+            "conditions": [
+                {
+                    "field": "dateTime",
+                    "operator": "less",
+                    "value": "30 days"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "mark_as_unread"
+                }
+            ]
+        },
+        {
+            "name": "Rule 6",
+            "predicate": "Any",
+            "conditions": [
+                {
+                    "field": "From",
+                    "operator": "notContain",
+                    "value": "spam@example.com"
+                },
+                {
+                    "field": "Subject",
+                    "operator": "notEqual",
+                    "value": "Unsubscribe"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "mark_as_read"
+                }
+            ]
+        },
+        {
+            "name": "Rule 7",
+            "predicate": "Any",
+            "conditions": [
+                {
+                    "field": "Subject",
+                    "operator": "contains",
+                    "value": "project update"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "move",
+                    "destination": "WORK"
+                }
+            ]
+        }
+    ]
+}
