@@ -21,7 +21,7 @@ This repository contains a standalone script that fetches emails from the Gmail 
      - Start the main script.
 
    ```bash
-   ./runscript.sh
+   source runscript.sh
     ```
 
 3. **First-time setup**:
