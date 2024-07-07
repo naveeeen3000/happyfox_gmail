@@ -7,10 +7,7 @@ import os
 def fetch_mails(limit=None):
     """Fetch user mails from Gmail account."""
     try:
-        if not os.path.exists('token.json'):
-            creds = authorize()
-        else:
-            creds = Credentials.from_authorized_user_file('token.json')
+        creds = authorize()
         
         service = build('gmail', 'v1', credentials=creds)
 

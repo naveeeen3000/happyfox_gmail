@@ -8,8 +8,8 @@ if [ -d "env" ]; then
 else
     echo "Creating a new virtual environment"
     python3 -m venv env
-    pip install -r requirements.txt
     source env/bin/activate
+    pip3 install -r requirements.txt
 fi
 
 # run unit tests

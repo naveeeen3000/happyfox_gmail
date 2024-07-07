@@ -22,7 +22,7 @@ def main():
         
         mails_from_db = query.get_mails(db=session)
         print("Applying rules to mails fetched from db\n")
-        rules.apply_rules(session,mails_from_db)
+        rules.apply_rules(session)
     except Exception as e:
         print("Error: ", str(e))
     finally:

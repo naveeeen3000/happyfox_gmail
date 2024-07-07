@@ -15,3 +15,5 @@ class Mail(Base):
     body = Column(Text, nullable=False)
     sent_at = Column(DateTime, nullable=False)
     labels = Column(JSON)
+    # user_id = forrignKey(User)
+    

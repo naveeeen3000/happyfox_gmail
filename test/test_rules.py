@@ -34,8 +34,7 @@ class TestRules(unittest.TestCase):
         mail_data = fetch_mails(limit=2)
         clean_mail_data = build_mail_data(mail_data)
         insert_bulk_mail(self.session, clean_mail_data)
-        mails = get_mails(self.session)
-        status = apply_rules(self.session, mails)
+        status = apply_rules(self.session, 2)
         self.assertTrue(status, "Failed to apply rules")
 
     def tearDown(self):

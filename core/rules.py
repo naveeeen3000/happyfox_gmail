@@ -4,7 +4,7 @@ from core import queries
 from sqlalchemy.orm import Session
 import json
 
-def apply_rules(db: Session, mails: list[dict], rules_nums=None):
+def apply_rules(db: Session, rules_nums=None):
     """Apply rules."""
     try:
         rules = get_rules().get('rules', [])
